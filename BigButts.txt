@@ -1,0 +1,13 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING chrome https://www.youtube.com/watch?v=zMprELBTrcg&list=RDzMprELBTrcg&start_radio=1
+ENTER
+DELAY 8000
+F11
+DELAY 1000
+REM Increase volume by pressing volume up key 20 times (Windows)
+REPEAT 10
+  VOLUME_UP
+  DELAY 200
+ENDREPEAT

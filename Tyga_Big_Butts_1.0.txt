@@ -1,0 +1,31 @@
+DELAY 1000
+REM Open Run dialog
+GUI r
+DELAY 500
+
+REM Open default browser with YouTube link (will open in normal window)
+STRING https://youtu.be/EQTntFmoiQ8?list=RDzMprELBTrcg
+ENTER
+DELAY 4000
+
+REM Try to maximize volume by pressing Windows Volume Up key several times
+REM (You can adjust the number of times depending on volume)
+REPEAT 10
+  VOLUME_UP
+  DELAY 300
+END_REPEAT
+
+REM Optional: Press F11 to toggle fullscreen in most browsers
+STRING F11
+ENTER
+DELAY 1000
+
+REM Open Notepad
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 1500
+
+REM Type the message
+STRING i like big butts :)

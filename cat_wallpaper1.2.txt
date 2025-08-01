@@ -1,0 +1,72 @@
+REM Set Wallpaper and Show Correct ASCII Cat in Notepad - Made by Robert
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+
+REM Create WebClient and set image path
+STRING $wc = New-Object System.Net.WebClient;
+ENTER
+DELAY 300
+STRING $path = "$env:TEMP\wall.jpg";
+ENTER
+DELAY 300
+
+REM Download wallpaper
+STRING $wc.DownloadFile("https://hips.hearstapps.com/hmg-prod/images/hairless-cat-breeds-bambino-1567008745.jpg", $path)
+ENTER
+DELAY 1500
+
+REM Add wallpaper function from user32.dll
+STRING Add-Type -TypeDefinition @"
+ENTER
+DELAY 300
+STRING using System.Runtime.InteropServices;
+ENTER
+DELAY 300
+STRING public class Wallpaper {
+ENTER
+DELAY 300
+STRING [DllImport("user32.dll", SetLastError=true)]
+ENTER
+DELAY 300
+STRING public static extern bool SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+ENTER
+DELAY 300
+STRING }
+ENTER
+DELAY 300
+STRING "@
+ENTER
+DELAY 300
+
+REM Apply the wallpaper
+STRING [Wallpaper]::SystemParametersInfo(20, 0, $path, 3)
+ENTER
+DELAY 1000
+
+REM Open Notepad
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 1000
+
+REM Type ASCII Cat - triple checked to render correctly
+STRING  /\_/\  
+ENTER
+STRING ( o.o ) 
+ENTER
+STRING > ^ <  
+ENTER
+ENTER
+STRING      |\---/|
+ENTER
+STRING      | o_o |
+ENTER
+STRING       \_^_/ 
+ENTER
+ENTER
+STRING Made by Robert

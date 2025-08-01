@@ -1,0 +1,9 @@
+REM Opens Amy Winehouse - Valerie video URL
+DELAY 1500
+GUI r
+DELAY 800
+STRING cmd
+ENTER
+DELAY 1000
+STRING start https://www.youtube.com/watch?v=bixuI_GV5I0
+ENTER

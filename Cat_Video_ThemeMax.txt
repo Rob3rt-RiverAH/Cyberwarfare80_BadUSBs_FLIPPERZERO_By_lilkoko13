@@ -1,0 +1,35 @@
+REM Open cute cat video on YouTube
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 800
+STRING start https://www.youtube.com/watch?v=J---aiyznGQ
+ENTER
+
+REM Wait for video to load
+DELAY 6000
+
+REM Max out volume
+REPEAT 50
+VOLUMEUP
+ENDREPEAT
+
+REM Open Settings > Personalization > Themes
+DELAY 1000
+GUI r
+DELAY 500
+STRING ms-settings:themes
+ENTER
+
+DELAY 2000
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+ENTER

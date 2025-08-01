@@ -1,0 +1,16 @@
+REM Opens YouTube video at 1:12 (72 seconds), full-screen, max volume
+LAYOUT US
+DELAY 500
+GUI r
+DELAY 500
+STRING https://youtu.be/QryoOF5jEbc?t=72s
+ENTER
+DELAY 2000
+REM Increase volume multiple times
+REPEAT 15
+STRING powershell -Command "(New‑Object -ComObject WScript.Shell).SendKeys([char]0xAF)"
+ENTER
+DELAY 500
+REM Toggle full-screen
+STRING f
+ENTER
