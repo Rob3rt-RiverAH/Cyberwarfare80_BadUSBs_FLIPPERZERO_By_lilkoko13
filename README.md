@@ -12,7 +12,7 @@ Cranks your volume to max
 Great for testing reaction speed and situational awareness under pressure
 
 🐱 Cat Wallpaper
-Downloads and sets a photo of “The Bambino,” your first cat, as the desktop background
+Downloads and sets a photo of “The Bambino,” my very first cat, as the desktop background
 
 Because every hacker needs a cat sidekick
 
@@ -22,9 +22,9 @@ Opens a wholesome cat video in the browser
 Restores balance to the chaos
 
 🎙️ Amy Winehouse YouTube
-Opens an Amy Winehouse song (optional: add your favorite)
+Opens an Amy Winehouse song i like
 
-Description: "the world’s finest crackhead" (in your words — keep it respectful if publishing publicly)
+Description: "the world’s finest crackhead" 
 
 🧼 Clear History
 Deletes all visible files and folders on the system
