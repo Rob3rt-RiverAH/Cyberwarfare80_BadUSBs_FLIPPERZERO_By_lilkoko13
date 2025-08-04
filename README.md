@@ -29,6 +29,9 @@ Description: "the world’s finest crackhead"
 🧼 Clear History
 Deletes all visible files and folders on the system
 
+Install Qflipper
+installs QFLIPPER on (mac or windows) for installing flipper files 
+
 Useful for “vanishing act” demonstrations (⚠️ Destructive — use with caution)
 
 ⚠️ Ethical Notice
